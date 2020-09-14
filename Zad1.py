@@ -2,38 +2,40 @@ import math
 pi = math.pi
 
 
-def prostokat(a, *b):
-    if a > 0 and b > 0:
+def prostokat(a, b=None): #nie wiedziałem jak to naprawić żeby dla naciśnięcia ENTER przy drugim parametrze traktowało to jako pierwszy warunek :((((((((
+    if a > 0 and b is None:
+        return a*a
+    elif a > 0 and b > 0:
         return a*b
-    if a <= 0 or b <= 0:
+    else:
         return print("Podałeś  liczby nierzeczywiste!")
 
 
 def kwadrat(a):
     if a > 0:
         return a*a
-    if a <= 0:
+    else:
         return print("Podałeś złą szerokość kwadratu!")
 
 
 def kolo(r):
     if r > 0:
         return 2*pi*r
-    if r <= 0:
+    else:
         return print("Podałeś zły promień koła!")
 
 
 def trojkat(a, h):
     if a > 0 and h > 0:
         return a*h/2
-    if a <= 0 or h < 0:
+    else:
         return print("Podałeś złe wartości trójkąta!")
 
 
 def trapez(a,b,h):
     if a > 0 and b > 0 and h > 0:
         return (a+b)*h/2
-    if a <= 0 or b <= 0 or h <= 0:
+    else:
         return print("Podałeś złe wartości trapeza")
 
 
@@ -70,4 +72,4 @@ try:
         print("Wpisałeś złą nazwę z listy. Spróbuj jeszcze raz :)")
 
 except ValueError:
-    print("MIAŁEŚ PODAĆ ILOŚĆ LICZBĘ!")
+    print("MIAŁEŚ PODAĆ LICZBĘ!")
