@@ -1,5 +1,5 @@
 import random
-lista_liczb=[]
+lista_liczb = []
 
 try:
     ile_liczb = int(input("Podaj ile losowych libcz ma wygenerować program: "))

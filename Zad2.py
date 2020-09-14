@@ -1,9 +1,10 @@
-numbers=[]
+numbers = []
+
 while True:
     value = input("Proszę podać liczbę ")
     if value.isnumeric():
         numbers.append(value)
-    elif value=="exit":
+    elif value == "exit":
         for number in numbers:
             print(number)
         break
